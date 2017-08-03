@@ -7,7 +7,7 @@ const schema = null;
 const app = express();
 
 app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
-app.use('/graphiql', bodyParser.json(), graphiqlExpress({ endpointURL: '/graphql' ));
+app.use('/graphiql', bodyParser.json(), graphiqlExpress({ endpointURL: '/graphql' }));
 
 const PORT = process.env.PORT || 3000;
 const listener = app.listen(process.env.PORT, () => {
