@@ -2,6 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 
+const server = new ApolloServer({ typeDefs, resolvers });
+
+app.use(server.middleware());
+app.use(server.graphiql());
+server.listen(app);
+
+
 
 // Import GraphQL schema
 const schema = require('./schema');
