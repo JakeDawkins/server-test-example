@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
+const { ApolloEngine } = require("apollo-engine");
 
 // const { ApolloServer } = require("apollo-server");
 
@@ -24,12 +25,21 @@ const schema = require('./schema');
 
 // Express App Setup
 const app = express();
-app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
+app.use('/graphql', bodyParser.json(), graphqlExpress({ schema, tracing: true, caching: true }));
 app.get('/', bodyParser.json(), graphiqlExpress({ endpointURL: '/graphql' }));
 
 
 // Listen for connections
 const PORT = process.env.PORT || 3000;
-const listener = app.listen(process.env.PORT, () => {
-  console.log('Your app is listening on port ' + listener.address().port);
-});
+app.listen(PORT);
+
+// const engine = new ApolloEngine({
+//   apiKey: process.env.ENGINE_API_KEY,
+//   reporting: { disabled: !process.env.ENGINE_API_KEY }
+// });
+
+// // Start your server
+// engine.listen({
+//   port: 3000,
+//   expressApp: app,
+// }), ({ url }) => console.log('Your app is listening on port 3000');;

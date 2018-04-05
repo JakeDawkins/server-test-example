@@ -16,8 +16,8 @@ const typeDefs = `
 
   # the schema allows the following query:
   type Query {
-    posts: [Post]
-    author(id: Int!): Author
+    posts: [Post] @cacheControl(maxAge: 60000)
+    author(id: Int!): Author @cacheControl(maxAge: 60000)
   }
 
   # this schema allows the following mutation:

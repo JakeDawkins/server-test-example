@@ -8,11 +8,12 @@
   },
   "dependencies": {
     "express": "^4.15.3",
-    "apollo-server-express": "^1.0.5",
+    "apollo-server-express": "latest",
     "body-parser": "^1.17.2",
-    "graphql": "^0.10.5",
-    "graphql-tools": "^1.1.0",
-    "lodash": "^4.17.4"
+    "graphql": "latest",
+    "graphql-tools": "latest",
+    "lodash": "^4.17.4",
+    "apollo-engine": "^1.0.4"
   },
   "engines": {
     "node": "8.x"
