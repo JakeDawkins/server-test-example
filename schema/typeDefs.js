@@ -1,13 +1,13 @@
 const typeDefs = `
 
-  type Author {
+  type Author @cacheControl(maxAge: 60000) {
     id: Int!
     firstName: String
     lastName: String
     posts: [Post] # the list of Posts by this author
   }
 
-  type Post {
+  type Post @cacheControl(maxAge: 60000) {
     id: Int!
     title: String
     author: Author
@@ -16,8 +16,8 @@ const typeDefs = `
 
   # the schema allows the following query:
   type Query {
-    posts: [Post] @cacheControl(maxAge: 60000)
-    author(id: Int!): Author @cacheControl(maxAge: 60000)
+    posts: [Post] 
+    author(id: Int!): Author
   }
 
   # this schema allows the following mutation:
@@ -30,3 +30,13 @@ const typeDefs = `
 `;
 
 module.exports = typeDefs;
+
+// query GetPosts {
+//   posts{
+//     id
+//     author {
+//       id
+//       firstName
+//     }
+//   }
+// }
