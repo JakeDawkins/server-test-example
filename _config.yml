@@ -2,12 +2,12 @@ sidebar_categories:
   null:
     - index # What these docs are.
     - why-apollo
+    - getting-started # prereqs, step 1, 2, 3, what next
     - whats-new
   Essentials:
-    - essentials/getting-started (preqs, example)
-    - essentials/basics
-    - essentials/building-schema
-    - essentials/loading-data
+    - essentials/building-schema # types, resolvers, "What you need for an executable schema"
+    - essentials/queries
+    - essentials/mutations
   Schema Development:
     - schemas/types
     - schemas/resolvers
@@ -20,7 +20,7 @@ sidebar_categories:
     - server/engine
     - server/secrets
   Best Practices:
-    - best-practices/architecture
+    - best-practices/infrastructure # possibly includes deployment
     - best-practices/authentication
     - best-practices/schema-design
     - best-practices/subscriptions
@@ -29,7 +29,7 @@ sidebar_categories:
     - best-practices/monitoring
     - best-practices/versioning
     - best-practices/schema-stitching
-    - best-practices/deploying
+    # - best-practices/deploying maybe in the infra section above (the deploy name is nice)
   Working with Backends:
     - backends/general
     - backends/sql
