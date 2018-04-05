@@ -1,0 +1,42 @@
+sidebar_categories:
+  null:
+    - index # What these docs are.
+    - why-apollo
+    - whats-new
+  Essentials:
+    - essentials/getting-started (preqs, example)
+    - essentials/basics
+    - essentials/building-schema
+    - essentials/loading-data
+  Schema Development:
+    - schemas/types
+    - schemas/resolvers
+    - schemas/context
+    - schemas/organizing-code
+  Running a Server:
+    - server/index
+    - server/middleware
+    - server/queries
+    - server/engine
+    - server/secrets
+  Best Practices:
+    - best-practices/architecture
+    - best-practices/authentication
+    - best-practices/schema-design
+    - best-practices/subscriptions
+    - best-practices/performance
+    - best-practices/caching
+    - best-practices/monitoring
+    - best-practices/versioning
+    - best-practices/schema-stitching
+    - best-practices/deploying
+  Working with Backends:
+    - backends/general
+    - backends/sql
+    - backends/mongodb
+    - backends/rest
+    - backends/prisma
+  API Reference:
+    - api/apollo-server
+    - api/graphql-subscriptions
+    - api/apollo-engine
