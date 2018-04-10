@@ -18,16 +18,13 @@ const { ApolloEngine } = require("apollo-engine");
 // otherwise you just call this
 // server.listen();
 
-
 // Import GraphQL schema
 const schema = require('./schema');
-
 
 // Express App Setup
 const app = express();
 app.use('/graphql', bodyParser.json(), graphqlExpress({ schema, tracing: true, cacheControl: true }));
 app.get('/', bodyParser.json(), graphiqlExpress({ endpointURL: '/graphql' }));
-
 
 // Listen for connections
 const PORT = process.env.PORT || 3000;
