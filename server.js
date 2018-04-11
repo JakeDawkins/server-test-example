@@ -3,21 +3,6 @@ const bodyParser = require('body-parser');
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const { ApolloEngine } = require("apollo-engine");
 
-// const { ApolloServer } = require("apollo-server");
-
-// const server = new ApolloServer({ typeDefs, resolvers });
-
-// XXX if you have an existing application
-// const { graphql, graphiql } = server.middleware({ endpoint: "/" });
-        
-// app.use(graphql);
-// app.use(graphiql);
-
-// server.listen({ app });
-
-// otherwise you just call this
-// server.listen();
-
 // Import GraphQL schema
 const schema = require('./schema');
 
@@ -38,4 +23,4 @@ const engine = new ApolloEngine({
 engine.listen({
   port: 3000,
   expressApp: app,
-}), ({ url }) => console.log('Your app is listening on port 3000');;
+}), ({ url }) => console.log('Your app is listening on port 3000');
