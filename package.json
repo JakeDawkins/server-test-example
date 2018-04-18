@@ -7,13 +7,10 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.15.3",
-    "apollo-server-express": "latest",
-    "body-parser": "^1.17.2",
+    "apollo-server": "2.0.0-alpha.1",
     "graphql": "latest",
-    "graphql-tools": "latest",
     "lodash": "^4.17.4",
-    "apollo-engine": "^1.0.4"
+    "apollo-engine": "^1.1.0"
   },
   "engines": {
     "node": "8.x"

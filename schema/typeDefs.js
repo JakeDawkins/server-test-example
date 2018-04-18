@@ -1,4 +1,6 @@
-const typeDefs = `
+const { gql } = require('apollo-server');
+
+const typeDefs = gql`
 
   type Author @cacheControl(maxAge: 60000) {
     id: Int!
@@ -30,13 +32,3 @@ const typeDefs = `
 `;
 
 module.exports = typeDefs;
-
-// query GetPosts {
-//   posts{
-//     id
-//     author {
-//       id
-//       firstName
-//     }
-//   }
-// }
