@@ -7,7 +7,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "apollo-server": "2.0.0-alpha.1",
+    "apollo-server": "2.0.0-alpha.2",
     "graphql": "latest",
     "lodash": "^4.17.4",
     "apollo-engine": "^1.1.0"
