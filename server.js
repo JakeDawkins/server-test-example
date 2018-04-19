@@ -4,6 +4,13 @@ const { ApolloServer } = require('apollo-server');
 const typeDefs = require('./schema/typeDefs');
 const resolvers = require('./schema/resolvers');
 
-const server = new ApolloServer({ typeDefs, resolvers, engine: true });
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  engine: true
+});
 
-server.listen().then(({ url }) => console.log(`🚀 Server ready at ${url}`));
+server.listen()
+  .then(({ url }) =>
+    console.log(`🚀 Server ready at ${url}`
+  ));
