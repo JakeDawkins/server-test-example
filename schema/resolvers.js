@@ -12,7 +12,7 @@ const posts = [
   { id: 4, authorId: 3, title: 'Launchpad is Cool', votes: 7 },
 ];
 
-const resolvers = {
+module.exports = {
   
   Query: {
     posts: () => posts,
@@ -39,5 +39,3 @@ const resolvers = {
   },
   
 };
-
-module.exports = resolvers;

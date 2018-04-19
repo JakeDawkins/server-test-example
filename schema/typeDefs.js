@@ -1,6 +1,6 @@
 const { gql } = require('apollo-server');
 
-const typeDefs = gql`
+module.exports = gql`
 
   type Author @cacheControl(maxAge: 60000) {
     id: Int!
@@ -30,5 +30,3 @@ const typeDefs = gql`
   }
 
 `;
-
-module.exports = typeDefs;
