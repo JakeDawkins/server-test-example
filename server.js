@@ -7,10 +7,13 @@ const typeDefs = gql`
   }
 `;
 
+let count = 0;
 // Provide resolver functions for your schema fields
 const resolvers = {
   Query: {
     hello: (root, args, context) => {
+      count++;
+      console.log({ count });
       return 'Hello world!';
     },
   },
