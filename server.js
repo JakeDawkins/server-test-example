@@ -1,9 +1,21 @@
 const { ApolloServer, gql } = require('apollo-server');
+const fetch = require('node-fetch');
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
   type Query {
-    hello: String
+    # returns a random dog image
+    dog(name: String!): Dog
+  }
+
+  type Mutation {
+    # this doesn't do anything, but don't tell anyone ;)
+    addDog(name: String!, image: String!): Dog
+  }
+
+  type Dog {
+    name: String!
+    image: String!
   }
 `;
 
