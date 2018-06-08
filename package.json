@@ -4,12 +4,12 @@
   "description": "Simple example covering the very basics of Graphql, and Apollo",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node src/server.js",
+    "test": "jest"
   },
   "dependencies": {
-    "apollo-server": "2.0.0-alpha.1",
-    "graphql": "latest",
-    "lodash": "^4.17.4",
+    "apollo-server": "2.0.0-beta.2",
+    "graphql": "^0.13.2",
     "apollo-engine": "^1.1.0"
   },
   "engines": {
@@ -20,8 +20,12 @@
   },
   "license": "MIT",
   "keywords": [
-    "node",
+    "apollo",
     "glitch",
-    "express"
-  ]
+    "graphql"
+  ],
+  "devDependencies": {
+    "graphql-tools": "^3.0.2",
+    "jest": "^23.1.0"
+  }
 }
